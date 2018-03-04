@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3ea001b-afcb-4f5a-8964-6bbd7fad443a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_trf.`kdtarif` AS tbl_trf_kdtarif,
+     tbl_trf.`daya` AS tbl_trf_daya,
+     tbl_trf.`tarifperkwh` AS tbl_trf_tarifperkwh
+FROM
+     `tbl_trf` tbl_trf]]>
+	</queryString>
+	<field name="tbl_trf_kdtarif" class="java.lang.String"/>
+	<field name="tbl_trf_daya" class="java.lang.String"/>
+	<field name="tbl_trf_tarifperkwh" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="8" width="555" height="1" uuid="8b05fdbd-37b9-4f57-9646-f660eeca201d"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="64" width="555" height="1" uuid="0e382ecc-144f-4710-88bc-60a8bddea793"/>
+			</line>
+			<staticText>
+				<reportElement x="74" y="37" width="100" height="20" uuid="3a0493f7-c770-4455-add0-6e9f878a537f"/>
+				<text><![CDATA[Telp. 082116695710]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="23" width="165" height="20" uuid="ffd20ea4-fdd9-46df-94fb-bc2cce53784d"/>
+				<text><![CDATA[JL. Tanjung Manggu Rt. 02 Rw. 02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="11" width="138" height="20" uuid="bdf4067e-139a-4323-83cf-895dd2e7db34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. LISTRIK PIKACHU]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="11" width="56" height="47" uuid="ae5975b9-8d07-4479-952f-6a208d937478"/>
+				<imageExpression><![CDATA["C:\\Users\\LENOVO\\Documents\\NetBeansProjects\\ApkPembListrik\\src\\Image\\listrik.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="18" forecolor="#FFFFFF" backcolor="#000000" uuid="df814ab0-ec90-4179-80d9-2ec2e6cdd4a4"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE TARIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="18" forecolor="#FFFFFF" backcolor="#000000" uuid="c6c61952-ffb2-4e7a-8405-497be3a1a0bc"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="18" forecolor="#FFFFFF" backcolor="#000000" uuid="dba5c2bb-6d44-4ca4-adce-f7f91cb86242"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TARIF PERKWH]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="24" width="550" height="1" uuid="2f2e1805-00d4-4675-8743-1a7eb26998fc"/>
+			</line>
+			<textField>
+				<reportElement x="2" y="4" width="183" height="20" uuid="a310546a-fe5c-400b-95aa-5cc9853483ed"/>
+				<textFieldExpression><![CDATA[$F{tbl_trf_kdtarif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="5" width="185" height="20" uuid="67950b0a-20ee-4cba-83f7-6fbb2ea0b69d"/>
+				<textFieldExpression><![CDATA[$F{tbl_trf_daya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="5" width="185" height="20" uuid="d252f054-94da-4999-8ded-b07eec60a743"/>
+				<textFieldExpression><![CDATA[$F{tbl_trf_tarifperkwh}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="516" y="6" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="b2ada71c-c6d5-4e3f-a0b6-7d3b9630231b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="342" y="6" width="170" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="f728cd4c-6828-4b37-a379-50b9a7cc28b4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="6" width="209" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="305bba4f-868f-4418-804a-970463971769"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
